@@ -9,39 +9,63 @@
 <body>
 
     <!-- Horizontal Menu -->
-<nav class="horizontal-menu">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="horizontal-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="pages/shoppingcart.html">Shopping Cart</a></li>
+        </ul>
+    </nav>
   
-  <!-- Vertical Menu -->
-  <aside class="vertical-menu">
-    <ul>
-      <li><a href="#section1">Section 1</a></li>
-      <li><a href="#section2">Section 2</a></li>
-      <li><a href="#section3">Section 3</a></li>
-    </ul>
-  </aside>
+    <!-- Vertical Menu -->
+    <aside class="vertical-menu">
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </aside>
   
     <h1>Homepage</h1>
 
     <div class="card-container">
-        <div class="card">
-          <div class="card-front">
-            <h2>Your Name</h2>
-            <p>Click to Learn More!</p>
+      <div class="card">
+          <div class="card-inner">
+              <!-- Front of the Card -->
+              <div class="card-front">
+                  <img src="assets/images/spike.png" alt="profile-image" class="profile-image">
+                  <h2>Ben Spiers</h2>
+                  <p>Web Developer and Bar Supervisor</p>
+                  <div class="button">
+                      <button class="flip-button" onclick="flipCard(this)">Learn more</button>
+                  </div>
+              </div>
+  
+              <!-- Back of the Card -->
+              <div class="card-back">
+                  <h2>Bio</h2>
+                  <p id="bio">Hi, I'm Ben! I work in a bar where I enjoy meeting new people and keeping the atmosphere lively. <br><br> When I'm not mixing drinks, you'll often find me diving into code, creating projects, and learning new programming skills. I'm also an avid gamer who loves exploring new worlds and challenges.
+                  <div class="button">
+                    <br>
+                    <br>
+                      <button class="flip-button" onclick="flipCard(this)">Back</button>
+                  </div>
+              </div>
           </div>
-          <div class="card-back">
-            <h3>About Me</h3>
-            <p>Interests: Web Development, Design, AI</p>
-            <p>Bio: I’m passionate about creating modern, user-friendly web experiences.</p>
-          </div>
-        </div>
       </div>
+  </div>
+  
+
+    <script>
+      function flipCard(button) {
+          const card = button.closest('.card'); // Find the nearest parent with the class "card"
+          if (card) {
+              card.classList.toggle('flipped'); // Add or remove the "flipped" class
+          }
+      }
+  </script>
+  
       
 </body>
 </html>
