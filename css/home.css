@@ -4,11 +4,18 @@ body {
 }
 
 /* Horizontal Menu */
+.horizontal-menu {
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .horizontal-menu ul {
     display: flex;
     list-style-type: none;
-    background-color: #333;
+    margin: 0;
     padding: 10px;
+    justify-content: center;
 }
 
 .horizontal-menu ul li {
@@ -19,6 +26,14 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+}
+
+.horizontal-menu ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
 }
 
 /* Vertical Menu */

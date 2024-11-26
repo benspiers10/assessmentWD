@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sorting.css">
+    <title>Sorting Objects Task</title>
+    <script defer src="javascript/sorting.js"></script>
+</head>
+<body>
+    <!-- Horizontal Menu -->
+    <nav class="horizontal-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shoppingcart.html">Shopping Cart - Task 1</a></li>
+            <li><a href="textproc.html">Text Processing - Task 2</a></li>
+            <li><a href="uishowcase.html">UI Showcase - Task 3</a></li>
+            <li><a href="sortingobjects.html">Sorting Objects - Task 4</a></li>
+            
+        </ul>
+    </nav>
+    
+    <h1>Sort People by Income or Birthday</h1>
+
+    <body>
+        <div id="container">
+            <!-- Form Section -->
+            <div id="formSection">
+                <h1>Add People</h1>
+                <form id="personForm">
+                    <label>
+                        Name:
+                        <input type="text" id="name" required>
+                    </label>
+                    <label>
+                        Income:
+                        <input type="number" id="income" required>
+                    </label>
+                    <label>
+                        Birthday:
+                        <input type="date" id="birthday" required>
+                    </label>
+                    <button type="submit">Add Person</button>
+                </form>
+            </div>
+    
+            <!-- List Section -->
+            <div id="listSection">
+                <h2>People List</h2>
+                <ul id="peopleList"></ul>
+                <div id="sortingButtons">
+                    <button id="sortByIncome">Sort by Income (Highest First)</button><br><br>
+                    <button id="sortByBirthday">Sort by Birthday (Oldest First)</button>
+                </div>
+            </div>
+        </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Horizontal Menu */
+.horizontal-menu {
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-menu ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+}
+
+.horizontal-menu ul li {
+    margin: 0 15px;
+}
+
+.horizontal-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+}
+
+.horizontal-menu ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+#tabs {
+    margin-top: 20px;
+}
+
+/* Sortable List */
+#sortable {
+    list-style-type: none;
+    padding: 0;
+    width: 300px;
+}
+
+#sortable li {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: move;
+}
+
+/* Accordion styling */
+#accordion {
+    width: 300px;
+}
+
+/* Datepicker styling */
+#datepicker {
+    width: 200px;
+    margin-top: 10px;
+}
+
+#content {
+    margin: 20px;
+}
+
+#accordion {
+    width: 500px;
+    height: 200px;
+    border: 1px solid #ccc;
+}

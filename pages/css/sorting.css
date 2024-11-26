@@ -1,0 +1,168 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack navigation on top */
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+/* Horizontal Menu */
+.horizontal-menu {
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-menu ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+}
+
+.horizontal-menu ul li {
+    margin: 0 15px;
+}
+
+.horizontal-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+}
+
+.horizontal-menu ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+/* Container for Layout */
+#container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px; /* Space below the navigation bar */
+}
+
+/* Form Section */
+#formSection {
+    width: 40%;
+    padding: 20px;
+    background: #f3f2fa;
+    border-right: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#formSection h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 2px solid green;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+form button {
+    width: 90%;
+    padding: 10px;
+    margin-top: 15px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #005f8a;
+}
+
+/* List Section */
+#listSection {
+    width: 60%;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#listSection h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#peopleList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    overflow-y: auto;
+    border: 2px solid green;
+    border-radius: 10px;
+    background: #f8f9fa; 
+    padding: 10px;
+}
+
+#peopleList li {
+    background: green;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* Sorting Buttons */
+#sortingButtons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#sortingButtons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    background: green;
+    transition: background 0.3s ease;
+}
+
+#sortingButtons button:hover {
+    background: #005f8a;
+}

@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="../css/shopping.css">
+    <link rel="stylesheet" href="css/shopping.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
-    <h1>Simple Shopping Cart</h1>
+     <!-- Horizontal Menu -->
+     <nav class="horizontal-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shoppingcart.html">Shopping Cart - Task 1</a></li>
+            <li><a href="textproc.html">Text Processing - Task 2</a></li>
+            <li><a href="uishowcase.html">UI Showcase - Task 3</a></li>
+            <li><a href="sortingobjects.html">Sorting Objects - Task 4</a></li>
+            
+        </ul>
+    </nav>
+  
 
+    <h1>Ben's Shopping Cart</h1>
     <!-- Product List -->
     <div id="products">
         <h2>Products</h2>
-        <div class="product" data-name="Product 1" data-price="10">
-            <p>Product 1 - $10</p>
-            <button class="add-to-cart">Add to Cart</button>
+        <div class="product" data-name="Columbia Sports Jacket" data-price="100" data-image="images/jacket.jpg">
+            <img src="images/jacket.jpg" alt="Columbia Sports Jacket" class="product-image">
+            <p>Columbia Sports Jacket - £100</p>
+            <button class="addtocart">Add to Cart</button>
         </div>
-        <div class="product" data-name="Product 2" data-price="20">
-            <p>Product 2 - $20</p>
-            <button class="add-to-cart">Add to Cart</button>
+        <div class="product" data-name="Celtic FC Jersey" data-price="80" data-image="images/jersey.jpg">
+            <img src="images/jersey.jpg" alt="Celtic FC Jersey" class="product-image">
+            <p>Celtic FC Jersey - £80</p>
+            <button class="addtocart">Add to Cart</button>
         </div>
-        <div class="product" data-name="Product 3" data-price="15">
-            <p>Product 3 - $15</p>
-            <button class="add-to-cart">Add to Cart</button>
+        <div class="product" data-name="Nike Trail Runners" data-price="65" data-image="images/shoes.jpg">
+            <img src="images/shoes.jpg" alt="Nike Trail Runners" class="product-image">
+            <p>Nike Trail Runners - £65</p>
+            <button class="addtocart">Add to Cart</button>
         </div>
     </div>
 
@@ -41,13 +56,13 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody id="cart-items">
-                <!-- Cart items will be dynamically added here -->
+            <tbody id="cartitems">
+                
             </tbody>
         </table>
-        <div id="cart-summary">
-            <p><strong>Total Cost:</strong> $<span id="total-cost">0.00</span></p>
-            <button id="clear-cart">Clear Cart</button>
+        <div id="cartsummary">
+            <p><strong>Total Cost:</strong> £<span id="totalcost">0.00</span></p>
+            <button id="clearcart">Clear Cart</button>
         </div>
     </div>
 

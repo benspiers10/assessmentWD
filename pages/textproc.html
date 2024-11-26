@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/textproc.css">
+    <title>Text Processing Task</title>
+</head>
+<body>
+
+    <!-- Horizontal Menu -->
+    <nav class="horizontal-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shoppingcart.html">Shopping Cart - Task 1</a></li>
+            <li><a href="textproc.html">Text Processing - Task 2</a></li>
+            <li><a href="uishowcase.html">UI Showcase - Task 3</a></li>
+            <li><a href="sortingobjects.html">Sorting Objects - Task 4</a></li>
+            
+        </ul>
+    </nav>
+
+    <div id="content">
+    <h1>UWS Paragraph Space Counter</h1>
+
+    <p>Enter a paragraph about UWS University below:</p>
+    <textarea id="uwsInput" placeholder="Type your paragraph here..."></textarea> 
+    <button id="countBtn">Count Spaces Before Last 'uws'</button><br><br>
+    
+    <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('countBtn').addEventListener('click', function () {
+            let paragraph = document.getElementById('uwsInput').value;
+            let searchText = "uws";
+            let lowerCaseParagraph = paragraph.toLowerCase(); // Make case-insensitive
+            let lastIndex = lowerCaseParagraph.lastIndexOf(searchText);
+
+            if (lastIndex === -1) {
+                document.getElementById('result').textContent = "The word 'UWS' was not found in the paragraph.";
+                return;
+            }
+
+            // Count spaces before the last occurrence of 'uws'
+            let substringBeforeUWS = paragraph.slice(0, lastIndex);
+            let spaceCount = (substringBeforeUWS.match(/ /g) || []).length;
+
+            document.getElementById('result').textContent = 
+                `The number of spaces before the last occurrence of "UWS" is : ${spaceCount}`;
+        });
+    </script>
+    
+</body>
+</html>

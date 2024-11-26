@@ -3,25 +3,28 @@ $(document).ready(function () {
 
     // Update Cart Display
     function updateCart() {
-        const $cartItems = $('#cart-items');
+        let $cartItems = $('#cartitems');
         $cartItems.empty();
         let totalCost = 0;
 
         for (let productName in cart) {
-            const item = cart[productName];
-            const itemTotal = item.price * item.quantity;
+            let item = cart[productName];
+            let itemTotal = item.price * item.quantity;
             totalCost += itemTotal;
 
             $cartItems.append(`
                 <tr>
-                    <td>${item.name}</td>
-                    <td>$${item.price.toFixed(2)}</td>
+                    <td>
+                        <img src="${item.image}" alt="${item.name}" class="cartimage">
+                        ${item.name}
+                    </td>
+                    <td>£${item.price.toFixed(2)}</td>
                     <td>
                         <button class="decrease" data-name="${item.name}">-</button>
                         ${item.quantity}
                         <button class="increase" data-name="${item.name}">+</button>
                     </td>
-                    <td>$${itemTotal.toFixed(2)}</td>
+                    <td>£${itemTotal.toFixed(2)}</td>
                     <td>
                         <button class="remove" data-name="${item.name}">Remove</button>
                     </td>
@@ -29,17 +32,18 @@ $(document).ready(function () {
             `);
         }
 
-        $('#total-cost').text(totalCost.toFixed(2));
+        $('#totalcost').text(totalCost.toFixed(2));
     }
 
     // Add to Cart
-    $('.add-to-cart').click(function () {
-        const $product = $(this).closest('.product');
-        const name = $product.data('name');
-        const price = parseFloat($product.data('price'));
+    $('.addtocart').click(function () {
+        let $product = $(this).closest('.product');
+        let name = $product.data('name');
+        let price = parseFloat($product.data('price'));
+        let image = $product.data('image');
 
         if (!cart[name]) {
-            cart[name] = { name: name, price: price, quantity: 1 };
+            cart[name] = { name: name, price: price, quantity: 1, image: image };
         } else {
             cart[name].quantity++;
         }
@@ -48,15 +52,15 @@ $(document).ready(function () {
     });
 
     // Increase Quantity
-    $('#cart-items').on('click', '.increase', function () {
-        const name = $(this).data('name');
+    $('#cartitems').on('click', '.increase', function () {
+        let name = $(this).data('name');
         cart[name].quantity++;
         updateCart();
     });
 
     // Decrease Quantity
-    $('#cart-items').on('click', '.decrease', function () {
-        const name = $(this).data('name');
+    $('#cartitems').on('click', '.decrease', function () {
+        let name = $(this).data('name');
         if (cart[name].quantity > 1) {
             cart[name].quantity--;
         } else {
@@ -66,14 +70,14 @@ $(document).ready(function () {
     });
 
     // Remove from Cart
-    $('#cart-items').on('click', '.remove', function () {
-        const name = $(this).data('name');
+    $('#cartitems').on('click', '.remove', function () {
+        let name = $(this).data('name');
         delete cart[name];
         updateCart();
     });
 
     // Clear Cart
-    $('#clear-cart').click(function () {
+    $('#clearcart').click(function () {
         cart = {};
         updateCart();
     });

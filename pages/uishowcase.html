@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uishowcase.css">
+    <title>Jquery UI Showcase</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <!-- Horizontal Menu -->
+    <nav class="horizontal-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shoppingcart.html">Shopping Cart - Task 1</a></li>
+            <li><a href="textproc.html">Text Processing - Task 2</a></li>
+            <li><a href="uishowcase.html">UI Showcase - Task 3</a></li>
+            <li><a href="sortingobjects.html">Sorting Objects - Task 4</a></li>
+            
+        </ul>
+    </nav>
+
+    <div id="content">
+    <h1>jQuery UI Feature Showcase</h1>
+    <!-- Tabs Container -->
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Sortable</a></li>
+            <li><a href="#tabs-2">Datepicker</a></li>
+            <li><a href="#tabs-3">Accordion</a></li>
+        </ul>
+
+        <!-- Sortable Tab -->
+        <div id="tabs-1">
+            <h2>Sortable List</h2>
+            <p>Drag and drop items to reorder them.</p>
+            <ul id="sortable">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </div>
+
+        <!-- Datepicker Tab -->
+        <div id="tabs-2">
+            <h2>Select a Date</h2>
+            <p>Pick a date for your event:</p>
+            <input type="text" id="datepicker" placeholder="Pick a date">
+        </div>
+
+        <!-- Accordion Tab -->
+        <div id="tabs-3">
+            <h2>Accordion Info</h2>
+            <div id="accordion">
+                <h3>Section 1</h3>
+                <div>
+                    <p>This is the content for section 1.</p>
+                </div>
+                <h3>Section 2</h3>
+                <div>
+                    <p>This is the content for section 2.</p>
+                </div>
+                <h3>Section 3</h3>
+                <div>
+                    <p>This is the content for section 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        $(function () {
+            // Initialize Tabs
+            $("#tabs").tabs();
+
+            // Initialize Sortable
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+
+            // Initialize Datepicker
+            $("#datepicker").datepicker();
+
+            // Initialize Accordion
+            $("#accordion").accordion();
+        });
+    </script>
+    
+</body>
+</html>
