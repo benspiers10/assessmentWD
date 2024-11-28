@@ -75,3 +75,32 @@ body {
     height: 200px;
     border: 1px solid #ccc;
 }
+
+@media (max-width: 768px) {
+    /* Adjust the horizontal menu to stack */
+    .horizontal-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .horizontal-menu ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra adjustments for very small screens */
+    #sortable {
+        width: 100%;
+    }
+
+    #tabs ul {
+        flex-direction: column;
+    }
+
+    #datepicker {
+        width: 100%;
+    }
+}
+

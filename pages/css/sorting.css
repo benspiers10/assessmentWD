@@ -166,3 +166,92 @@ form button:hover {
 #sortingButtons button:hover {
     background: #005f8a;
 }
+
+@media (max-width: 768px) {
+    /* Horizontal Menu */
+    .horizontal-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .horizontal-menu ul li {
+        margin: 10px 0;
+    }
+
+    /* Container Layout */
+    #container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #formSection, #listSection {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #formSection h1, #listSection h2 {
+        text-align: center;
+    }
+
+    /* Form Styling */
+    form label {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* List Section */
+    #peopleList {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Sorting Buttons */
+    #sortingButtons button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller Screens Adjustments */
+    #container {
+        padding: 10px;
+    }
+
+    form input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    form button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #sortingButtons button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #peopleList {
+        font-size: 14px;
+    }
+}
+
