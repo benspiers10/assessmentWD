@@ -1,20 +1,20 @@
 class Person {
-    constructor(name, income, birthday) {
+    letructor(name, income, birthday) {
         this.name = name;
         this.income = parseFloat(income); // Ensure income is a float
         this.birthday = new Date(birthday); // Ensure birthday is a valid date
     }
 }
 
-const people = [];
+let people = [];
 
 document.getElementById('personForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Collect form inputs
-    const name = document.getElementById('name').value.trim();
-    const income = parseFloat(document.getElementById('income').value); // Convert to number
-    const birthday = document.getElementById('birthday').value;
+    let name = document.getElementById('name').value.trim();
+    let income = parseFloat(document.getElementById('income').value); // Convert to number
+    let birthday = document.getElementById('birthday').value;
 
     // Validate inputs
     if (!name || isNaN(income) || !birthday) {
@@ -23,7 +23,7 @@ document.getElementById('personForm').addEventListener('submit', function (event
     }
 
     // Create and add a new Person object
-    const person = new Person(name, income, birthday);
+    let person = new Person(name, income, birthday);
     people.push(person);
 
     // Clear form and update the display
@@ -44,12 +44,12 @@ document.getElementById('sortByBirthday').addEventListener('click', function () 
 });
 
 function updateList() {
-    const list = document.getElementById('peopleList');
+    let list = document.getElementById('peopleList');
     list.innerHTML = '';
 
     // Create and append list items for each person
     people.forEach(person => {
-        const li = document.createElement('li');
+        let li = document.createElement('li');
         li.textContent = `Name: ${person.name} - Income: £${person.income.toFixed(0)} - Birthday: ${person.birthday.toDateString()}`;
         list.appendChild(li);
     });

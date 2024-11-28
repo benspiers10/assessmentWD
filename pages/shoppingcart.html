@@ -4,43 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/shopping.css">
+    <!-- Link to Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    <!-- Link to jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
-     <!-- Horizontal Menu -->
-     <nav class="horizontal-menu">
+    <!-- Horizontal Menu -->
+    <nav class="horizontal-menu">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="shoppingcart.html">Shopping Cart - Task 1</a></li>
-            <li><a href="textproc.html">Text Processing - Task 2</a></li>
-            <li><a href="uishowcase.html">UI Showcase - Task 3</a></li>
-            <li><a href="sortingobjects.html">Sorting Objects - Task 4</a></li>
-            
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="shoppingcart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+            <li><a href="textproc.html"><i class="fas fa-pencil-alt"></i> Text Processing</a></li>
+            <li><a href="uishowcase.html"><i class="fas fa-desktop"></i> UI Showcase</a></li>
+            <li><a href="sortingobjects.html"><i class="fas fa-user"></i> Sorting Objects</a></li>
         </ul>
     </nav>
-  
 
     <h1>Ben's Shopping Cart</h1>
     <!-- Product List -->
+    <h2 id="prodhead">Products</h2>
+    
     <div id="products">
-        <h2>Products</h2>
-        <div class="product" data-name="Columbia Sports Jacket" data-price="100" data-image="images/jacket.jpg">
-            <img src="images/jacket.jpg" alt="Columbia Sports Jacket" class="product-image">
-            <p>Columbia Sports Jacket - £100</p>
+        <!-- Product 1 -->
+        <div class="product" data-name="Columbia Jacket" data-price="100" data-image="images/jacket.jpg">
+            <img src="images/jacket.jpg" alt="Columbia Jacket" class="product-image">
+            <p>Columbia Jacket - £100</p>
             <button class="addtocart">Add to Cart</button>
         </div>
+        <!-- Product 2 -->
         <div class="product" data-name="Celtic FC Jersey" data-price="80" data-image="images/jersey.jpg">
             <img src="images/jersey.jpg" alt="Celtic FC Jersey" class="product-image">
             <p>Celtic FC Jersey - £80</p>
             <button class="addtocart">Add to Cart</button>
         </div>
+        <!-- Product 3 -->
         <div class="product" data-name="Nike Trail Runners" data-price="65" data-image="images/shoes.jpg">
             <img src="images/shoes.jpg" alt="Nike Trail Runners" class="product-image">
             <p>Nike Trail Runners - £65</p>
             <button class="addtocart">Add to Cart</button>
         </div>
+        <!-- Product 4 -->
+        <div class="product" data-name="Nike Joggers" data-price="50" data-image="images/joggers.jpg">
+            <img src="images/joggers.jpg" alt="Nike Joggers" class="product-image">
+            <p>Nike Joggers - £50</p>
+            <button class="addtocart">Add to Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product" data-name="France Jersey" data-price="70" data-image="images/france.jpg">
+            <img src="images/france.jpg" alt="France Jersey" class="product-image">
+            <p>France Jersey - £70</p>
+            <button class="addtocart">Add to Cart</button>
+        </div>
+        <!-- Button to go to cart -->
+        <a href="#cart"><button id="goToCartBtn"><i class="fas fa-shopping-cart"></i> Go to Cart</button></a>
     </div>
 
     <!-- Shopping Cart -->
@@ -57,7 +77,7 @@
                 </tr>
             </thead>
             <tbody id="cartitems">
-                
+                <!-- Cart items will be dynamically added here -->
             </tbody>
         </table>
         <div id="cartsummary">
@@ -66,6 +86,7 @@
         </div>
     </div>
 
+    <!-- Link to external JavaScript file -->
     <script src="javascript/cart.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    /* Set default font and remove margin */
 }
 
 /* Horizontal Menu */
@@ -8,6 +9,7 @@ body {
     width: 100%;
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Full width, dark background, and subtle shadow */
 }
 
 .horizontal-menu ul {
@@ -16,10 +18,12 @@ body {
     margin: 0;
     padding: 10px;
     justify-content: center;
+    /* Flexbox for horizontal layout, center items */
 }
 
 .horizontal-menu ul li {
     margin: 0 15px;
+    /* Space between menu items */
 }
 
 .horizontal-menu ul li a {
@@ -29,15 +33,18 @@ body {
     font-weight: bold;
     padding: 8px 16px;
     transition: background 0.3s ease;
+    /* Style links, add padding and hover transition */
 }
 
 .horizontal-menu ul li a:hover {
     background: #575757;
     border-radius: 5px;
+    /* Change background on hover, add rounded corners */
 }
 
 #tabs {
     margin-top: 20px;
+    /* Space above tabs */
 }
 
 /* Sortable List */
@@ -45,6 +52,7 @@ body {
     list-style-type: none;
     padding: 0;
     width: 300px;
+    /* Remove list style, set width */
 }
 
 #sortable li {
@@ -53,27 +61,32 @@ body {
     border: 1px solid #ccc;
     background: #f9f9f9;
     cursor: move;
+    /* Style list items, make them draggable */
 }
 
 /* Accordion styling */
 #accordion {
     width: 300px;
+    /* Set width for accordion */
 }
 
 /* Datepicker styling */
 #datepicker {
     width: 200px;
     margin-top: 10px;
+    /* Set width and space above datepicker */
 }
 
 #content {
     margin: 20px;
+    /* Space around content */
 }
 
 #accordion {
     width: 500px;
     height: 200px;
     border: 1px solid #ccc;
+    /* Set size and border for accordion */
 }
 
 @media (max-width: 768px) {
@@ -82,10 +95,12 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 0;
+        /* Stack menu items vertically */
     }
 
     .horizontal-menu ul li {
         margin: 10px 0;
+        /* Space between stacked items */
     }
 }
 
@@ -93,14 +108,16 @@ body {
     /* Extra adjustments for very small screens */
     #sortable {
         width: 100%;
+        /* Full width for sortable list */
     }
 
     #tabs ul {
         flex-direction: column;
+        /* Stack tabs vertically */
     }
 
     #datepicker {
         width: 100%;
+        /* Full width for datepicker */
     }
 }
-

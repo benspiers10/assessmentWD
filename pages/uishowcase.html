@@ -4,89 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/uishowcase.css">
-    <title>Jquery UI Showcase</title>
+    <title>jQuery UI Showcase</title>
+    
+    <!-- jQuery and jQuery UI -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 </head>
 <body>
-    <!-- Horizontal Menu -->
-    <nav class="horizontal-menu">
+    
+   <!-- Horizontal Menu -->
+   <nav class="horizontal-menu">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="shoppingcart.html">Shopping Cart - Task 1</a></li>
-            <li><a href="textproc.html">Text Processing - Task 2</a></li>
-            <li><a href="uishowcase.html">UI Showcase - Task 3</a></li>
-            <li><a href="sortingobjects.html">Sorting Objects - Task 4</a></li>
-            
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="shoppingcart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+            <li><a href="textproc.html"><i class="fas fa-pencil-alt"></i> Text Processing</a></li>
+            <li><a href="uishowcase.html"><i class="fas fa-desktop"></i> UI Showcase</a></li>
+            <li><a href="sortingobjects.html"><i class="fas fa-user"></i> Sorting Objects</a></li>
         </ul>
-    </nav>
+   </nav>
 
-    <div id="content">
-    <h1>jQuery UI Feature Showcase</h1>
-    <!-- Tabs Container -->
-    <div id="tabs">
-        <ul>
-            <li><a href="#tabs-1">Sortable</a></li>
-            <li><a href="#tabs-2">Datepicker</a></li>
-            <li><a href="#tabs-3">Accordion</a></li>
-        </ul>
-
-        <!-- Sortable Tab -->
-        <div id="tabs-1">
-            <h2>Sortable List</h2>
-            <p>Drag and drop items to reorder them.</p>
-            <ul id="sortable">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-                <li>Item 5</li>
+   <div id="content">
+        <h1>jQuery UI Feature Showcase</h1>
+        
+        <!-- Tabs Container -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Sortable</a></li>
+                <li><a href="#tabs-2">Datepicker</a></li>
+                <li><a href="#tabs-3">Accordion</a></li>
             </ul>
-        </div>
 
-        <!-- Datepicker Tab -->
-        <div id="tabs-2">
-            <h2>Select a Date</h2>
-            <p>Pick a date for your event:</p>
-            <input type="text" id="datepicker" placeholder="Pick a date">
-        </div>
+            <!-- Sortable Tab -->
+            <div id="tabs-1">
+                <h2>Sortable List</h2>
+                <p>Drag and drop items to reorder them.</p>
+                <ul id="sortable">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                </ul>
+            </div>
 
-        <!-- Accordion Tab -->
-        <div id="tabs-3">
-            <h2>Accordion Info</h2>
-            <div id="accordion">
-                <h3>Section 1</h3>
-                <div>
-                    <p>This is the content for section 1.</p>
-                </div>
-                <h3>Section 2</h3>
-                <div>
-                    <p>This is the content for section 2.</p>
-                </div>
-                <h3>Section 3</h3>
-                <div>
-                    <p>This is the content for section 3.</p>
+            <!-- Datepicker Tab -->
+            <div id="tabs-2">
+                <h2>Select a Date</h2>
+                <p>Pick a date for your event:</p>
+                <input type="text" id="datepicker" placeholder="Pick a date">
+            </div>
+
+            <!-- Accordion Tab -->
+            <div id="tabs-3">
+                <h2>Accordion Info</h2>
+                <div id="accordion">
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>This is the content for section 1.</p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>This is the content for section 2.</p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>This is the content for section 3.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
     <script>
-        $(function () {
-            // Initialize Tabs
-            $("#tabs").tabs();
+$(function () {
+    // Initialize Tabs
+    $("#tabs").tabs();
 
-            // Initialize Sortable
-            $("#sortable").sortable();
-            $("#sortable").disableSelection();
+    // Initialize Sortable
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
 
-            // Initialize Datepicker
-            $("#datepicker").datepicker();
+    // Initialize Datepicker
+    $("#datepicker").datepicker();
 
-            // Initialize Accordion
-            $("#accordion").accordion();
-        });
+    // Initialize Accordion with all sections closed initially
+    $("#accordion").accordion({
+        active: false,         // No section is open initially
+        collapsible: true,     // Allow all sections to be collapsed
+        heightStyle: "content" // Automatically adjust height based on content
+    });
+});
+
     </script>
-    
 </body>
 </html>

@@ -167,6 +167,7 @@ form button:hover {
     background: #005f8a;
 }
 
+/* Responsive Design for Tablets */
 @media (max-width: 768px) {
     /* Horizontal Menu */
     .horizontal-menu ul {
@@ -229,6 +230,7 @@ form button:hover {
     }
 }
 
+/* Responsive Design for Mobile Phones */
 @media (max-width: 480px) {
     /* Smaller Screens Adjustments */
     #container {
@@ -254,4 +256,3 @@ form button:hover {
         font-size: 14px;
     }
 }
-

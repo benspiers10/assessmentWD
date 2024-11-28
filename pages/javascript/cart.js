@@ -7,11 +7,13 @@ $(document).ready(function () {
         $cartItems.empty();
         let totalCost = 0;
 
+        // Loop through each item in the cart
         for (let productName in cart) {
             let item = cart[productName];
             let itemTotal = item.price * item.quantity;
             totalCost += itemTotal;
 
+            // Append item details to the cart display
             $cartItems.append(`
                 <tr>
                     <td>
@@ -32,6 +34,7 @@ $(document).ready(function () {
             `);
         }
 
+        // Update the total cost display
         $('#totalcost').text(totalCost.toFixed(2));
     }
 
@@ -42,12 +45,15 @@ $(document).ready(function () {
         let price = parseFloat($product.data('price'));
         let image = $product.data('image');
 
+        // If the item is not in the cart, add it with quantity 1
         if (!cart[name]) {
             cart[name] = { name: name, price: price, quantity: 1, image: image };
         } else {
+            // If the item is already in the cart, increase its quantity
             cart[name].quantity++;
         }
 
+        // Update the cart display
         updateCart();
     });
 

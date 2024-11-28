@@ -4,70 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assessment HTML Site</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/home.css">
+    <!-- Link to Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Horizontal Menu -->
     <nav class="horizontal-menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/shoppingcart.html">Shopping Cart - Task 1</a></li>
-            <li><a href="pages/textproc.html">Text Processing - Task 2</a></li>
-            <li><a href="pages/uishowcase.html">UI Showcase - Task 3</a></li>
-            <li><a href="pages/sortingobjects.html">Sorting Objects - Task 4</a></li>
-            
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="pages/shoppingcart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+            <li><a href="pages/textproc.html"><i class="fas fa-pencil-alt"></i> Text Processing</a></li>
+            <li><a href="pages/uishowcase.html"><i class="fas fa-desktop"></i> UI Showcase</a></li>
+            <li><a href="pages/sortingobjects.html"><i class="fas fa-user"></i> Sorting Objects</a></li>
         </ul>
     </nav>
-  
+    
     <!-- Vertical Menu -->
     <aside class="vertical-menu">
         <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#card">Section 1 - Card</a></li>
+            <li><a href="#description">Section 2 - Description</a></li>
             <li><a href="#section3">Section 3</a></li>
         </ul>
     </aside>
   
-    <h1>Homepage</h1>
+    <div id="content">
+        <h1>Homepage</h1>
 
-    <div class="card-container">
-      <div class="card">
-          <div class="card-inner">
-              <!-- Front of the Card -->
-              <div class="card-front">
-                  <img src="assets/images/spike.png" alt="profile-image" class="profile-image">
-                  <h2>Ben Spiers</h2>
-                  <p>Web Developer and Bar Supervisor</p>
-                  <div class="button">
-                      <button class="flip-button" onclick="flipCard(this)">Learn more</button>
-                  </div>
-              </div>
-  
-              <!-- Back of the Card -->
-              <div class="card-back">
-                  <h2>Bio</h2>
-                  <p id="bio">Hi, I'm Ben! I work in a bar where I enjoy meeting new people and keeping the atmosphere lively. <br><br> When I'm not mixing drinks, you'll often find me diving into code, creating projects, and learning new programming skills. I'm also an avid gamer who loves exploring new worlds and challenges.
-                  <div class="button">
-                    <br>
-                    <br>
-                      <button class="flip-button" onclick="flipCard(this)">Back</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
+        <!-- Card Container -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <!-- Front of the Card -->
+                    <div class="card-front">
+                        <img src="assets/images/spike.png" alt="profile-image" class="profile-image">
+                        <h2>Ben Spiers</h2>
+                        <p>B01740770 - Web and Mobile Dev</p>
+                        <p>Web Developer and Bar Supervisor</p>
+                        <div class="button">
+                            <button class="flip-button" onclick="flipCard(this)">Learn more</button>
+                        </div>
+                    </div>
+    
+                    <!-- Back of the Card -->
+                    <div class="card-back">
+                        <h2>Bio</h2>
+                        <p id="bio">Hi, I'm Ben! I work in a bar where I enjoy meeting new people and keeping the atmosphere lively. <br><br> When I'm not mixing drinks, you'll often find me diving into code, creating projects, and learning new programming skills. I'm also an avid gamer who loves exploring new worlds and challenges.
+                        <div class="button">
+                            <br>
+                            <br>
+                            <button class="flip-button" onclick="flipCard(this)">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Description Section -->
+        <h1 id="description">Description of site</h1>
+        <p>
+            This website showcases front-end web development skills using HTML, CSS, JavaScript, and jQuery. <br><br> It includes interactive features like a shopping cart to manage products, a jQuery UI showcase with sortable lists and datepickers, text processing tools for manipulating text, and a class sorting section to organise data. <br>The site is designed to be user-friendly and responsive across devices.
+        </p>
+    </div>
+
+    <!-- JavaScript for flipping the card -->
     <script>
-      function flipCard(button) {
-          let card = button.closest('.card'); // Find the nearest parent with the class "card"
-          if (card) {
-              card.classList.toggle('flipped'); // Add or remove the "flipped" class
-          }
-      }
-  </script>
+        function flipCard(button) {
+            let card = button.closest('.card'); // Find the nearest parent with the class "card"
+            if (card) {
+                card.classList.toggle('flipped'); // Add or remove the "flipped" class
+            }
+        }
+    </script>
   
-      
 </body>
 </html>

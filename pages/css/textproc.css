@@ -1,117 +1,117 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: Arial, sans-serif; /* Set the font family for the body */
+    margin: 0; /* Remove default margin */
 }
 
 /* Horizontal Menu */
 .horizontal-menu {
-    width: 100%;
-    background-color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width */
+    background-color: #333; /* Dark background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .horizontal-menu ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    justify-content: center;
+    display: flex; /* Flexbox layout */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding */
+    justify-content: center; /* Center the menu items */
 }
 
 .horizontal-menu ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Space between menu items */
 }
 
 .horizontal-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 8px 16px;
-    transition: background 0.3s ease;
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 8px 16px; /* Padding around links */
+    transition: background 0.3s ease; /* Smooth background transition */
 }
 
 .horizontal-menu ul li a:hover {
-    background: #575757;
-    border-radius: 5px;
+    background: #575757; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners */
 }
 
 #content {
-    margin: 20px;
+    margin: 20px; /* Margin around content */
 }
 
 textarea {
-    width: 90%;
-    height: 100px;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 90%; /* Width of textarea */
+    height: 100px; /* Height of textarea */
+    margin-bottom: 15px; /* Space below textarea */
+    padding: 10px; /* Padding inside textarea */
+    font-size: 14px; /* Font size */
+    border: 1px solid #ccc; /* Border color and width */
+    border-radius: 5px; /* Rounded corners */
 }
 
 #result {
-    font-size: 16px;
-    color: #333;
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
 }
 
 @media (max-width: 768px) {
     /* Horizontal Menu */
     .horizontal-menu ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+        display: flex; /* Flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 0; /* Remove padding */
     }
 
     .horizontal-menu ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Space between items */
     }
 
     /* Content Area */
     #content {
-        padding: 10px;
-        text-align: center;
+        padding: 10px; /* Padding around content */
+        text-align: center; /* Center text */
     }
 
     #uwsInput {
-        width: 90%;
-        height: 120px;
-        font-size: 16px;
-        padding: 10px;
-        margin: 10px auto;
-        display: block;
-        border-radius: 8px;
-        border: 2px solid #0077b6;
+        width: 90%; /* Width of input */
+        height: 120px; /* Height of input */
+        font-size: 16px; /* Font size */
+        padding: 10px; /* Padding inside input */
+        margin: 10px auto; /* Margin around input */
+        display: block; /* Block display */
+        border-radius: 8px; /* Rounded corners */
+        border: 2px solid #0077b6; /* Border color and width */
     }
 
     #countBtn {
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 8px;
-        margin-top: 10px;
+        padding: 10px 20px; /* Padding around button */
+        font-size: 16px; /* Font size */
+        border-radius: 8px; /* Rounded corners */
+        margin-top: 10px; /* Space above button */
     }
 
     #result {
-        font-size: 18px;
-        margin-top: 15px;
+        font-size: 18px; /* Font size */
+        margin-top: 15px; /* Space above result */
     }
 }
 
 @media (max-width: 480px) {
     /* Adjustments for very small screens */
     #uwsInput {
-        width: 100%;
-        font-size: 14px;
+        width: 100%; /* Full width */
+        font-size: 14px; /* Smaller font size */
     }
 
     #countBtn {
-        width: 100%;
-        font-size: 14px;
-        padding: 8px;
+        width: 100%; /* Full width */
+        font-size: 14px; /* Smaller font size */
+        padding: 8px; /* Less padding */
     }
 
     #result {
-        font-size: 16px;
+        font-size: 16px; /* Smaller font size */
     }
 }
