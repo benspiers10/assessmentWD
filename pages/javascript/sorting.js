@@ -1,5 +1,5 @@
 class Person {
-    letructor(name, income, birthday) {
+    constructor(name, income, birthday) {
         this.name = name;
         this.income = parseFloat(income); // Ensure income is a float
         this.birthday = new Date(birthday); // Ensure birthday is a valid date
